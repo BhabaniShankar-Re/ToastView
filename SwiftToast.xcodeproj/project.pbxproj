@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		005A92AF258496AD00C00C13 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = SwiftToast/ToastView/README.md; sourceTree = "<group>"; };
+		005A92B32584AD8B00C00C13 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		00DFB6BC2583638F0083ABB4 /* SwiftToast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftToast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00DFB6BF2583638F0083ABB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00DFB6C12583638F0083ABB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		00DFB6B32583638F0083ABB4 = {
 			isa = PBXGroup;
 			children = (
-				005A92AF258496AD00C00C13 /* README.md */,
+				005A92B32584AD8B00C00C13 /* README.md */,
 				00DFB6BE2583638F0083ABB4 /* SwiftToast */,
 				00DFB6D5258363910083ABB4 /* SwiftToastTests */,
 				00DFB6E0258363910083ABB4 /* SwiftToastUITests */,
