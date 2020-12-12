@@ -33,12 +33,16 @@ class Toastview {
     
     static func show(message: String?) {
         DispatchQueue.main.async {
+            guard _toastView != nil else { fatalError("Please Configure the Toastview in AppDelegate") }
             _toastView.show(message: message)
         }
     }
     
     static func show(message: String?, backgroundColor: UIColor?, fontColor: UIColor?) {
-        _toastView.show(message: message, bgColor: backgroundColor, fontColor: fontColor)
+        DispatchQueue.main.async {
+            guard _toastView != nil else { fatalError("Please Configure the Toastview in AppDelegate") }
+            _toastView.show(message: message, bgColor: backgroundColor, fontColor: fontColor)
+        }
     }
     
     private var window: UIWindow? {
