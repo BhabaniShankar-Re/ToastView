@@ -15,12 +15,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     
-    @IBAction func createView(_ sender: Any) {
-       
+    @IBAction func cancel(_ sender: Any) {
+        passwordTextField.resignFirstResponder()
         Toastview.show(message: "Hellooo... World")
         userTextField.resignFirstResponder()
+        
     }
-
+    
+    @IBAction func showToast(_ sender: Any) {
+        Toastview.show(message: "Hi there..")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -32,17 +36,12 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UITextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("i am in")
-        return true
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("begin")
-    }
-    
-
-}
+//extension ViewController: UITextFieldDelegate {
+//
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//
+//        return true
+//    }
+//
+//}
 
