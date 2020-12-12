@@ -11,8 +11,14 @@ class Toastview {
     static private var _toastView: Toastview!
     
     fileprivate static var _font: UIFont = UIFont.preferredFont(forTextStyle: .callout)
-    fileprivate static var _toastBackgroundColor: UIColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-    fileprivate static var _fontColor: UIColor = .black
+    fileprivate static var _toastBackgroundColor: UIColor = UIColor.tertiarySystemGroupedBackground
+    fileprivate static var _fontColor: UIColor = UIColor { (traitCollection) -> UIColor in
+        if traitCollection.userInterfaceStyle == .dark {
+            return .lightText
+        }else {
+            return .darkText
+        }
+    }
     
     static func configure() {
         _toastView = Toastview()
@@ -133,6 +139,7 @@ fileprivate class ToastMessage: UIView {
         messagelabel.numberOfLines = 0
         messagelabel.textAlignment = .center
         messagelabel.font = Toastview._font
+        messagelabel.adjustsFontForContentSizeCategory = true
         messagelabel.textColor = Toastview._fontColor
         backgroundColor = Toastview._toastBackgroundColor
         self.alpha = 0.0
